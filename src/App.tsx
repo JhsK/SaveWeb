@@ -1,9 +1,15 @@
+import CssBaseline from '@mui/material/CssBaseline/CssBaseline';
 import React from 'react';
 import { Header } from './components/Header/Header';
+import UserSave from './components/UserSave/UserSave';
 
 function App() {
   return (
-    <Header />
+    <>
+      <CssBaseline />
+      <Header />
+      <UserSave />
+    </>
   );
 }
 

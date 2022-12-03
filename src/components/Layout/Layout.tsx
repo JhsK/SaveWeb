@@ -6,7 +6,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <Container>{children}</Container>;
+  return <Container maxWidth={'lg'}>{children}</Container>;
 };
 
 export { Layout };
