@@ -8,7 +8,12 @@ import { SaveToolBar } from './SaveToolBar';
 const UserSave = () => {
   return (
     <Layout>
-      <Stack spacing={5}>
+      <Stack
+        spacing={5}
+        sx={{
+          height: 'calc(100vh - 64px)',
+        }}
+      >
         <SaveToolBar />
         <FileOrSiteList />
       </Stack>
