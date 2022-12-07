@@ -3,9 +3,14 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { Divider, IconButton, Stack, Typography } from '@mui/material';
+import { useAtom } from 'jotai';
+
+import { testAtom } from '../store/toolBar';
 
 const SaveToolBar = () => {
+  const [checkMode, setCheckMode] = useAtom(testAtom);
   return (
     <div>
       <Stack
@@ -27,6 +32,9 @@ const SaveToolBar = () => {
           </IconButton>
           <IconButton>
             <RemoveIcon />
+          </IconButton>
+          <IconButton onClick={() => setCheckMode()}>
+            <CheckBoxOutlinedIcon />
           </IconButton>
         </div>
       </Stack>

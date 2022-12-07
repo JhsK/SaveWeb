@@ -3,6 +3,9 @@ import FolderTwoToneIcon from '@mui/icons-material/FolderTwoTone';
 import { Breadcrumbs, Stack } from '@mui/material';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import styled from '@emotion/styled';
+import { useAtom } from 'jotai';
+
+import { testAtom } from './store/toolBar';
 
 const columns: GridColDef[] = [
   { field: 'name', headerName: '이름', width: 200 },
@@ -42,6 +45,8 @@ const TableWrapper = styled.div`
 `;
 
 const FileOrSiteList = () => {
+  const [checkMode] = useAtom(testAtom);
+  console.log(checkMode);
   return (
     // check mode 상태를 만들어서 check mode일 때는 checkbox를 보여주고 아닐 때는 column 클릭 시 이동할 수 있도록 처리.
     <TableWrapper>
