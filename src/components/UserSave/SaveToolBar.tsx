@@ -7,10 +7,10 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { Divider, IconButton, Stack, Typography } from '@mui/material';
 import { useAtom } from 'jotai';
 
-import { testAtom } from '../store/toolBar';
+import { checkModeAtom } from '../store/toolBar';
 
 const SaveToolBar = () => {
-  const [checkMode, setCheckMode] = useAtom(testAtom);
+  const [checkMode, setCheckMode] = useAtom(checkModeAtom);
   return (
     <div>
       <Stack
@@ -33,7 +33,7 @@ const SaveToolBar = () => {
           <IconButton>
             <RemoveIcon />
           </IconButton>
-          <IconButton onClick={() => setCheckMode()}>
+          <IconButton onClick={() => setCheckMode((prev) => !prev)}>
             <CheckBoxOutlinedIcon />
           </IconButton>
         </div>
