@@ -1,6 +1,19 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import { Typography } from '../Molecule';
+
+const Header = () => {
+  return (
+    <HeaderWrapper>
+      <HeaderFlex>
+        <Logo src="/logo/logo.png" alt="logo" />
+        <Typography>로그인</Typography>
+      </HeaderFlex>
+    </HeaderWrapper>
+  );
+};
+
 const HeaderWrapper = styled.div`
   width: 100%;
   border-bottom: 1px solid black;
@@ -20,16 +33,5 @@ const Logo = styled.img`
   width: 200px;
   height: 40px;
 `;
-
-const Header = () => {
-  return (
-    <HeaderWrapper>
-      <HeaderFlex>
-        <Logo src="/logo/logo.png" alt="logo" />
-        <div>로그인</div>
-      </HeaderFlex>
-    </HeaderWrapper>
-  );
-};
 
 export { Header };
