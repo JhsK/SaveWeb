@@ -21,4 +21,4 @@ const UserSave = () => {
   );
 };
 
-export default UserSave;
+export { UserSave };

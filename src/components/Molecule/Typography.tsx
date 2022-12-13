@@ -11,7 +11,7 @@ interface TypographyProps extends MuiTypographyProps {
 
 const Typography = ({ pointer, children, ...props }: TypographyProps) => {
   return (
-    <Wrapper pointer>
+    <Wrapper pointer={!!pointer}>
       <MuiTypography {...props}>{children}</MuiTypography>
     </Wrapper>
   );
